@@ -1,0 +1,24 @@
+\subsection*{Problem \#2}
+\begin{claim*}
+The Kullbeck-Leibler divergence 
+\begin{equation}
+D_{KL}(p\|q) = \int p(x)\; \log \left( \frac{p(x)}{q(x)} \right) dx
+\label{eq: DKL}
+\end{equation}
+is always non-negative.
+\end{claim*}
+
+\begin{proof}
+Starting from the KL divergence definition in equation~\ref{eq: DKL}, multiply and divide by $q(x)$ and rearrange:
+\begin{align}
+\int p(x) \log \left( \frac{p(x)}{q(x)} \right) dx 
+&= \int p(x) \cdot \frac{q(x)}{q(x)} \log \left( \frac{p(x)}{q(x)} \right) dx \notag \\
+&= \int q(x) \left[ \frac{p(x)}{q(x)} \log \left( \frac{p(x)}{q(x)} \right) \right] dx
+\label{eq:rewrite}
+\end{align}
+.............
+Therefore, it is indeed non-negative:
+\[
+\boxed{\int p(x) \log \left( \frac{p(x)}{q(x)} \right) dx \ge 0.}
+\]
+\end{proof}
